@@ -44,4 +44,4 @@ def facesearch():
 
 
 if __name__ == '__main__':
-    facesearch()
+    print facesearch()
