@@ -8,17 +8,13 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-HOST = '192.168.32.109'
+HOST = '192.168.80.37'
 PORT = 50088
-BUFSIZE = 65535
 ADDR = (HOST, PORT)
 
 s = socket(AF_INET, SOCK_STREAM)
 s.bind(ADDR)
 s.listen(5)
-
-sync_robot_loc = [12.3, 13.6]
-welcomeStr = 'Welcome to 12.1 python socket server'
 
 # def logFileRead(logFile):
 #     '''
@@ -47,6 +43,7 @@ def def_socket_thread():
     print('连接断开!')
 
 
+# noinspection PyInterpreter
 def read_from_client(c, addr):
     while True:
         content = c.recv(1024).decode('gbk')
